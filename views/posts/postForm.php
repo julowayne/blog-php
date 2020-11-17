@@ -11,7 +11,7 @@
       <input type="text" class="form-control" id="title" name="title" value="<?= isset($post) && !empty($post) ? $post->title : '' ?><?= isset($_SESSION['old_inputs']) ? $_SESSION['old_inputs']['title'] : '' ?>"><br>
       <div for="created"><strong>Création:</strong> <?= isset($post) && !empty($post) ? $post->created_at : '' ?><?= isset($_SESSION['old_inputs']['created_at']) ? $_SESSION['old_inputs']['created_at'] : '' ?></div><br>
       <label for="article-content">Contenu de l'article:</label>
-      <input type="text" class="form-control" id="article-content" name="body" value="<?php if (!empty($_SESSION['old_input']['body'])): ?><?= $_SESSION['old_input']['body'] ?><?php else: ?><?php if(isset($post)): ?><?= $post->body ?><?php endif;endif; ?>"><br>
+      <input type="text" class="form-control" id="article-content" name="body" value="<?php if (!empty($_SESSION['old_input']['body'])): ?><?= $_SESSION['old_input']['body'] ?><?php elseif(isset($post)): ?><?= $post->body ?><?php endif; ?>"><br>
       <input class="btn btn-lg btn-success mt-2" name="save" type="submit" value="Enregistrer" />
   </form>
 </div>
