@@ -13,18 +13,17 @@
 <nav class="navbar navbar-light bg-info">
   <a class="navbar-brand" href="/articles">Back-Office du blog</a>
 </nav>
-
-<div class="container">
-  <div class="content">
-    <?= $content ?>
+  <div class="container">
+    <div class="content">
+      <?= $content ?>
+    </div>
   </div>
-</div>
 </body>
 </html>
 <style>
   body {
         background-color: #F8F8F8;
-        padding: 0;
+        margin: 0;
     }
   .content {
     background-color: #FEFDFD;
@@ -41,4 +40,9 @@
   h1 {
     margin-bottom: 1em;
   }
+  @media (max-width: 575.98px) { 
+    .btn {
+      margin-bottom: 0.25em;
+    }
+   }
 </style>
